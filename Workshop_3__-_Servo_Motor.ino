@@ -14,9 +14,9 @@ void setup() {
   delay(1500);
 
   // === Setup Code for Part 1 (b) === //
-  //myservo2.attach(9); //configure digital pin 9 to control the servo
-  //myservo2.write(93);
-  //delay(1000);
+  myservo2.attach(9); //configure digital pin 9 to control the servo
+  myservo2.write(93);
+  delay(1000);
 }
 
 void posServo(){
@@ -26,8 +26,6 @@ void posServo(){
     delay(100);
 }
   
-
-/*
 void rotServo(){
   
   
@@ -51,13 +49,11 @@ void rotServo(){
   }
  
 }
-  */ 
 
 void loop() {
   // Call the function for each part of the lab here to run
-
-   posServo(); //For Position Servo
-  // rotServo(); //For Continuous Rotation Servo
+  posServo(); //For Position Servo
+  rotServo(); //For Continuous Rotation Servo
   delay(5);
 
 }
