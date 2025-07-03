@@ -1,17 +1,10 @@
 #include <Servo.h>
 
-
-Servo myservo1;
 Servo myservo2;
 int currentPosition = 0; 
 
 void setup() {
   Serial.begin(9600);
-
-  // === Setup Code for Part 1 (a) === //
-  myservo1.attach(11); //configure digital pin 11 to control the servo
-  myservo1.write(0);
-  delay(1500);
 
   // === Setup Code for Part 1 (b) === //
   myservo2.attach(9); //configure digital pin 9 to control the servo
@@ -19,15 +12,8 @@ void setup() {
   delay(1000);
 }
 
-void posServo(){
-  int num = Serial.parseInt();
-    Serial.println(num);
-    myservo1.write(num);
-    delay(100);
-}
   
 void rotServo(){
-  
   
   int num = Serial.parseInt();
   Serial.println(num);
@@ -52,7 +38,6 @@ void rotServo(){
 
 void loop() {
   // Call the function for each part of the lab here to run
-  posServo(); //For Position Servo
   rotServo(); //For Continuous Rotation Servo
   delay(5);
 
